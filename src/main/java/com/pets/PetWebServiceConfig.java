@@ -35,7 +35,7 @@ public class PetWebServiceConfig extends WsConfigurerAdapter {
     }
 
     @Bean
-    public XsdSchema countriesSchema() {
+    public XsdSchema petsSchema() {
         return new SimpleXsdSchema(new ClassPathResource("petSearch.xsd"));
     }
 }
