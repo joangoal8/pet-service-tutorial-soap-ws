@@ -1,0 +1,27 @@
+<xs:schema targetNamespace='http://pets.io/ws/removePetOwner'
+           xmlns:tns='http://pets.io/ws/removePetOwner'
+           xmlns:xs='http://www.w3.org/2001/XMLSchema' elementFormDefault="qualified">
+    <xs:element name='removePetOwnerRequest'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name='petOwnerId' type='xs:string'/>
+                <xs:element name='petId' type='xs:string'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name='removePetOwnerResponse'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs='0' maxOccurs='unbounded' name='pets' type='tns:pet'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name='pet'>
+        <xs:sequence>
+            <xs:element name='id' type='xs:string'/>
+            <xs:element name='name' type='xs:string'/>
+            <xs:element name='age' type='xs:int'/>
+            <xs:element name='breed' type='xs:string'/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
