@@ -13,7 +13,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import java.util.List;
 
 @Endpoint
-public class PetServiceController implements PetService {
+public class PetServiceController implements PetApiService {
 
     private PetsRepository petsRepository;
 
