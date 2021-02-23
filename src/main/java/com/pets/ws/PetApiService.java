@@ -7,7 +7,7 @@ import io.pets.ws.removepetowner.RemovePetOwnerResponse;
 import io.pets.ws.search.PetSearchRequest;
 import io.pets.ws.search.PetSearchResponse;
 
-public interface PetService {
+public interface PetApiService {
 
     PetSearchResponse search(PetSearchRequest request);
 
